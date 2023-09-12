@@ -1,53 +1,43 @@
 ﻿;|=================================|
 ;| STARTUP SCRIPT WITH AUTOCORRECT |
 ;|=================================|
-#NoEnv
-#Warn
-SendMode Input
-SetWorkingDir %A_ScriptDir%
-Menu, Tray, Icon, icon.ico
+#Requires AutoHotkey v2.0
+SetCapslockState "AlwaysOff"
 
-#include %A_ScriptDir%\apps\
-#include *i showdesk.ahk
-#include *i notepadplusplus.ahk
-
-#include %A_ScriptDir%\expansion\
-#include *i textexpansion.ahk
-#include *i tuftes.ahk
-
-#s:: Run Notepad
+if FileExist("icon.ico")
+    TraySetIcon  "icon.ico"
 
 ;|=============|
 ;| AUTOCORRECT |
 ;|=============|
 
 ; apostrophes
-:oc:havent::haven't{space}
-:oc:didnt::didn't{space}
-:oc:couldnt::couldn't{space}
-:oc:wouldnt::wouldn't{space}
-:oc:dont::don't{space}
-:oc:cant::can't{space}
-:oc:wont::won't{space}
-:oc:theyll::they'll{space}
-:oc:theyd::they'd{space}
-:oc:theyre::they're{space}
-:oc:youre::you're{space}
-:oc:shouldnt::shouldn't{space}
-:oc:doesnt::doesn't{space}
-:oc:arent::aren't{space}
-:oc:hadnt::hadn't{space}
-:oc:isnt::isn't{space}
-:oc:heres::here's{space}
-:oc:itll::it'll{space}
-:oc:thats::that's{space}
-:oc:theyve::they've{space}
-:oc:weve::we've{space}
-:oc:whats::what's{space}
-:oc:wheres::where's{space}
-:oc:whove::who've{space}
-:oc:youd::you'd{space}
-:oc:youve::you've{space}
+:oc:havent::haven’t{space}
+:oc:didnt::didn’t{space}
+:oc:couldnt::couldn’t{space}
+:oc:wouldnt::wouldn’t{space}
+:oc:dont::don’t{space}
+:oc:cant::can’t{space}
+:oc:wont::won’t{space}
+:oc:theyll::they’ll{space}
+:oc:theyd::they’d{space}
+:oc:theyre::they’re{space}
+:oc:youre::you’re{space}
+:oc:shouldnt::shouldn’t{space}
+:oc:doesnt::doesn’t{space}
+:oc:arent::aren’t{space}
+:oc:hadnt::hadn’t{space}
+:oc:isnt::isn’t{space}
+:oc:heres::here’s{space}
+:oc:itll::it’ll{space}
+:oc:thats::that’s{space}
+:oc:theyve::they’ve{space}
+:oc:weve::we’ve{space}
+:oc:whats::what’s{space}
+:oc:wheres::where’s{space}
+:oc:whove::who’ve{space}
+:oc:youd::you’d{space}
+:oc:youve::you’ve{space}
 
 ;days and months
 :oc:monday::Monday{space}
@@ -59,7 +49,7 @@ Menu, Tray, Icon, icon.ico
 :oc:sunday::Sunday{space}
 :oc:january::January{space}
 :oc:february::February{space}
-:oc:march::March{space}
+;:oc:march::March{space}
 :oc:april::April{space}
 :oc:june::June{space}
 :oc:july::July{space}
@@ -492,7 +482,7 @@ Menu, Tray, Icon, icon.ico
 :oc:arival::arrival{space}
 :oc:armamant::armament{space}
 :oc:armistace::armistice{space}
-:oc:arn't::are not{space}
+:oc:arn’t::are not{space}
 :oc:arond::around{space}
 :oc:aroud::around{space}
 :oc:arrangment::arrangement{space}
@@ -768,7 +758,7 @@ Menu, Tray, Icon, icon.ico
 :oc:cannonical::canonical{space}
 :oc:cannotation::connotation{space}
 :oc:cannotations::connotations{space}
-:oc:can't of been::can not have been{space}
+:oc:can’t of been::can not have been{space}
 :oc:cantalope::cantaloupe{space}
 :oc:caost::coast{space}
 :oc:caperbility::capability{space}
@@ -977,7 +967,7 @@ Menu, Tray, Icon, icon.ico
 :oc:comntains::contains{space}
 :oc:compability::compatibility{space}
 :oc:compair::compare{space}
-:oc:companys::company's{space}
+:oc:companys::company’s{space}
 :oc:comparision::comparison{space}
 :oc:comparisions::comparisons{space}
 :oc:comparitive::comparative{space}
@@ -1180,8 +1170,8 @@ Menu, Tray, Icon, icon.ico
 :oc:cotten::cotton{space}
 :oc:coucil::council{space}
 :oc:coudl::could{space}
-:oc:coudln't::could not{space}
-:oc:coudn't::could not{space}
+:oc:coudln’t::could not{space}
+:oc:coudn’t::could not{space}
 :oc:could of been::could have been{space}
 :oc:could of had::could have had{space}
 :oc:couldnt::could not{space}
@@ -1485,7 +1475,7 @@ Menu, Tray, Icon, icon.ico
 :oc:documnets::documents{space}
 :oc:doe snot::does not{space}
 :oc:doens::does{space}
-:oc:doens't::does not{space}
+:oc:doens’t::does not{space}
 :oc:doese::does{space}
 :oc:doign::doing{space}
 :oc:doimg::doing{space}
@@ -1495,9 +1485,9 @@ Menu, Tray, Icon, icon.ico
 :oc:dominent::dominant{space}
 :oc:dominiant::dominant{space}
 :oc:donig::doing{space}
-:oc:don't no::do not know{space}
-:oc:do'nt::do not{space}
-:oc:dosn't::does not{space}
+:oc:don’t no::do not know{space}
+:oc:do’nt::do not{space}
+:oc:dosn’t::does not{space}
 :oc:doulbe::double{space}
 :oc:dowloads::downloads{space}
 :oc:dramtic::dramatic{space}
@@ -2090,7 +2080,7 @@ Menu, Tray, Icon, icon.ico
 :oc:homogeneized::homogenized{space}
 :oc:honory::honorary{space}
 :oc:horrifing::horrifying{space}
-:oc:hors devours::hors d'oeuvres{space}
+:oc:hors devours::hors d’oeuvres{space}
 :oc:hosited::hoisted{space}
 :oc:hospitible::hospitable{space}
 :oc:hounour::honour{space}
@@ -2376,7 +2366,7 @@ Menu, Tray, Icon, icon.ico
 :oc:issueing::issuing{space}
 :oc:isthe::is the{space}
 :oc:it snot::it is not{space}
-:oc:it' snot::it is not{space}
+:oc:it’ snot::it is not{space}
 :oc:itis::it is{space}
 :oc:ititial::initial{space}
 :oc:itnerest::interest{space}
@@ -2453,8 +2443,8 @@ Menu, Tray, Icon, icon.ico
 :oc:lenght::length{space}
 :oc:leran::learn{space}
 :oc:lerans::learns{space}
-:oc:let's him::lets him{space}
-:oc:let's it::lets it{space}
+:oc:let’s him::lets him{space}
+:oc:let’s it::lets it{space}
 :oc:leutenant::lieutenant{space}
 :oc:levetate::levitate{space}
 :oc:levetated::levitated{space}
@@ -3697,7 +3687,7 @@ Menu, Tray, Icon, icon.ico
 :oc:shorly::shortly{space}
 :oc:shortwhile::short while{space}
 :oc:shoudl::should{space}
-:oc:shoudln't::should not{space}
+:oc:shoudln’t::should not{space}
 :oc:should of been::should have been{space}
 :oc:should of had::should have had{space}
 :oc:shouldent::should not{space}
@@ -4087,7 +4077,7 @@ Menu, Tray, Icon, icon.ico
 :oc:thenew::the new{space}
 :oc:therafter::thereafter{space}
 :oc:therby::thereby{space}
-:oc:there's is::theirs is{space}
+:oc:there’s is::theirs is{space}
 :oc:theri::their{space}
 :oc:thesame::the same{space}
 :oc:thetwo::the two{space}
@@ -4096,9 +4086,9 @@ Menu, Tray, Icon, icon.ico
 :oc:theyr::they are{space}
 :oc:theyre::they are{space}
 :oc:theyv::they have{space}
-:oc:they're are::there are{space}
-:oc:they're is::there is{space}
-:oc:theyve::they've{space}
+:oc:they’re are::there are{space}
+:oc:they’re is::there is{space}
+:oc:theyve::they’ve{space}
 :oc:thgat::that{space}
 :oc:thge::the{space}
 :oc:thier::their{space}
@@ -4144,7 +4134,7 @@ Menu, Tray, Icon, icon.ico
 :oc:tkaing::taking{space}
 :oc:tlaking::talking{space}
 :oc:tobbaco::tobacco{space}
-; :oc:todays::today's{space}
+; :oc:todays::today’s{space}
 :oc:todya::today{space}
 :oc:togehter::together{space}
 :oc:toghether::together{space}
@@ -4419,7 +4409,7 @@ Menu, Tray, Icon, icon.ico
 :oc:wendsay::Wednesday{space}
 :oc:wensday::Wednesday{space}
 :oc:wereabouts::whereabouts{space}
-:oc:wern't::were not{space}
+:oc:wern’t::were not{space}
 :oc:werre::were{space}
 :oc:whant::want{space}
 :oc:whants::wants{space}
@@ -4470,14 +4460,14 @@ Menu, Tray, Icon, icon.ico
 :oc:wohle::whole{space}
 :oc:wokr::work{space}
 :oc:wokring::working{space}
-:oc:womens::women's{space}
+:oc:womens::women’s{space}
 :oc:wonderfull::wonderful{space}
-:oc:wo'nt::will not{space}
+:oc:wo’nt::will not{space}
 :oc:workststion::workstation{space}
 :oc:worls::world{space}
 :oc:worstened::worsened{space}
 :oc:woudl::would{space}
-:oc:woudln't::would not{space}
+:oc:woudln’t::would not{space}
 :oc:would of been::would have been{space}
 :oc:would of had::would have had{space}
 :oc:wouldbe::would be{space}
@@ -4516,7 +4506,7 @@ Menu, Tray, Icon, icon.ico
 :oc:your the::you are the{space}
 :oc:your their::you are their{space}
 ;:oc:your your::you are your{space}
-:oc:you're own::your own{space}
+:oc:you’re own::your own{space}
 :oc:youseff::yousef{space}
 :oc:youself::yourself{space}
 :oc:ytou::you{space}
